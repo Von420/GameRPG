@@ -11,19 +11,5 @@ export class AutenticacaoService {
   linkLogin: string = "http://moreiramoises.pt/server/apis/login.php";
   linkLogon = 'http://moreiramoises.pt/server/apis/signup.php';
 
-  logIn(user, pass){
-    let dataToSend: FormData = new FormData();
-    dataToSend.append("username", user);
-    dataToSend.append("password", pass);
-
-    return this.http.post(this.linkLogin, dataToSend);
-  }
-
-  logOn(user, pass) {
-    let dataToSend: FormData = new FormData();
-    dataToSend.append('username', user);
-    dataToSend.append('password', pass);
-
-    return this.http.post(this.linkLogon, dataToSend);
-  }
+  
 }

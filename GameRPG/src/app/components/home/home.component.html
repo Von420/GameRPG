@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div #overlay class="overlay hide">
+    <div class="box">
+      <!-- left -->
+      <div class="left">
+        <div class="background"></div>
+
+        <div class="container">
+          <p>Sign in</p>
+          <h1>Fill the form below to login into your account</h1>
+        </div>
+
+        <div class="container">
+          <input #user type="text" placeholder="Username" required>
+          <input #pass type="password" placeholder="Password" required>
+        </div>
+
+        <div class="container">
+          <input id="checkbox" type="checkbox" (click)="checkAnim(checkmark)">
+          <span #cbox class="checkbox">
+            <span #checkmark class="checkMark">✖</span>
+          </span>
+
+          <button (click)="logIn(user.value, pass.value)">Sign in</button>
+        </div>
+      </div>
