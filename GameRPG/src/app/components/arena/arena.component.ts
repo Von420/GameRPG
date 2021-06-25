@@ -121,3 +121,5 @@ export class ArenaComponent implements OnInit {
     this.setInitialValue(); 
   }
 }
+
+//No que toca as status de cada personagem, não estão funcionais devido ao aparecimento de alguns erros
