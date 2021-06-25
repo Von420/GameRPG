@@ -5,9 +5,9 @@
     <form>
         <div class="box">
           <h1>Register </h1>
-          <input class="input1" type="text" required="required" placeholder="Username">
-          <input class="input2" type="text" required="required" placeholder="Password">
-          <button class="button">SignUp</button>
+          <input #nome class="input1" type="text" placeholder="Username"  required>
+          <input #pass class="input2" type="password" placeholder="Password"  required>
+          <button class="button" (click)="registar(nome.value, pass.value)">SignUp</button>
           <a class="login" [routerLink]="['/Login']" routerLinkActive="active">Login</a>
         </div>
       </form>

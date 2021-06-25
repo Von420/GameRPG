@@ -4,12 +4,18 @@
   </div>
   <nav>
     <ul class="menu">
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
+      <li><a [routerLink]="['/Createchar']" routerLinkActive="active">CreateChar</a></li>
+      <li><a [routerLink]="['/Creategun']" routerLinkActive="active">CreateWeapon</a></li>
+      <li><a [routerLink]="['/Arena']" routerLinkActive="active">To Fight</a></li>
+      <li><a [routerLink]="['/Login']" routerLinkActive="active">Exit</a></li>
     </ul>
   </nav>
-   
+  <div class="createChar-containe">
+    <div class="anime">
+      <img src="../../../assets/img/welcome.gif" alt="" class="welcome">
+    </div>
+  </div>
+  
 
 
 

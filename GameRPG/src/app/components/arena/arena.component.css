@@ -1,0 +1,289 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+  
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+  
+.img-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
+}
+
+.info1{
+  position: fixed;
+  left: 12.5%;
+  right: 0;
+  top: 12%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  height: 200px;
+  width: 20%;
+  background-color: #fff;
+  opacity: 60%;
+  border-radius: 10%;
+  float: center;
+}
+
+.info1 .heart{
+  position: inherit;
+  left: 14.2%;
+  top: 17%;
+  width: 26px; 
+}
+
+.vida1 {
+  position: fixed;
+  left: 16.5%;
+  right: 0;
+  top: 17.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.vida2{
+  position: fixed;
+  left: 82.5%;
+  right: 0;
+  top: 17.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.ataque1 {
+  position: fixed;
+  left: 16.5%;
+  right: 0;
+  top: 22.5%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.ataque2{
+  position: fixed;
+  left: 82.5%;
+  right: 0;
+  top: 22.5%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+  
+.inteligencia1 {
+  position: fixed;
+  left: 16.5%;
+  right: 0;
+  top: 27.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.inteligencia2{
+  position: fixed;
+  left: 82.5%;
+  right: 0;
+  top: 27.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.nome1 {
+  position: fixed;
+  left: 16.5%;
+  right: 0;
+  top: 32.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.nome2{
+  position: fixed;
+  left: 79.25%;
+  right: 0;
+  top: 32.25%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.info2{
+  position: fixed;
+  left: 67.5%;
+  right: 0;
+  top: 12%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  height: 200px;
+  width: 20%;
+  background-color: #fff;
+  opacity: 60%;
+  border-radius: 10%;
+  float: center;
+}
+
+.info2 .heart{
+  position: inherit;
+  left: 84.1%;
+  top: 17%;
+  width: 26px;
+}
+
+.middle{
+  position: fixed;
+  left: 62.5%;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  height: 200px;
+  width: 25%;
+}
+
+.vs{
+  position: inherit;
+  width: 180px;
+  top: 22%;
+  left: 45%;
+}
+
+.anime1{
+  position: fixed;
+  left: 12.5%;
+  right: 0;
+  top: 40%;
+  font-size: 20px;
+  height: 180px;
+  width: 100%;
+}
+
+.anime1 .player1{
+  position: inherit;
+  left: 16%;
+  top: 47%;
+  width: 18%;
+}
+
+.anime2{
+  position: fixed;
+  left: 12.5%;
+  right: 0;
+  top: 40%;
+  font-size: 20px;
+  height: 180px;
+  width: 100%;
+}
+
+.anime2 .player2{
+  position: inherit;
+  left: 66%;
+  top: 47%;
+  width: 18%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.strength{
+  position: fixed;
+  left: 62.5%;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.strength .strength1{
+  position: inherit;
+  left: 14%;
+  top: 22%;
+  width: 30px;
+}
+
+.strength .strength2{
+  position: inherit;
+  left: 84%;
+  top: 22%;
+  width: 30px;
+}
+
+.intelligence{
+  position: fixed;
+  left: 62.5%;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.intelligence .intelligence1{
+  position: inherit;
+  left: 14%;
+  top: 27%;
+  width: 30px;
+}
+
+.intelligence .intelligence2{
+  position: inherit;
+  left: 84%;
+  top: 27%;
+  width: 30px;
+}
+
+.name{
+  position: fixed;
+  left: 62.5%;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  height: 30px;
+  width: 25%;
+}
+
+.name .name1{
+  position: inherit;
+  left: 14%;
+  top: 32%;
+  width: 30px;
+}
+
+.name .name2{
+  position: inherit;
+  left: 84%;
+  top: 32%;
+  width: 30px;
+}
+
+.fight button{
+  width: 100px;
+  height: 40px;
+  margin-top: 30%;
+  margin-left: 46%;
+  background-color: #191919;;
+  opacity: 80%;
+  color: #fff;
+  font-size: 18px;
+}
+
+.exit button{
+  width: 100px;
+  height: 40px;
+  margin-top: 2%;
+  margin-left: 46%;
+  background-color: #191919;;
+  opacity: 80%;
+  color: #fff;
+  font-size: 18px;
+}

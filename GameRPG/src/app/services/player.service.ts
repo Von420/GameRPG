@@ -7,23 +7,47 @@ export class PlayerService {
 
   constructor() { }
 
-  // user id
-  playerID: any;
+  pointsEvolve: number=2;
+  backgroundImg:any="";
+   password: any;
+   username: any;
+   playerID: any = "" ;
 
-  // user data
-  password: any;
-  username: any;
 
-  // player
-  player: any = {
-    name: "login",
+   //personagem criada
+   player: any = {
+     name: "",
+     id: "",
+     atk: "",
+     isMonset: "",
+     int: "",
+     life: "",
+     img: "",
+     idPlayer: "",
+     weapon: "not"
+   }
+
+
+   //personagem inimiga
+   enemy: any = {
+    name: "",
     id: "",
-    atk: "0",
+    atk: "",
     isMonset: "",
-    int: "0",
-    lp: "0",
+    int: "",
+    life: "",
     img: "",
     idPlayer: "",
-    weapon: "punch"
-  };
+    weapon: "not"
+  }
+
+  //arma 
+   weapon: any = {
+    name : "",
+    atk : "",
+    durabilidade : "",
+    vida : "",
+    idPersonagem : "",
+    tipoDeArma : "",
+   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AutenticacaoService } from 'src/app/services/serviceRPG.service';
 import { HttpClient } from '@angular/common/http';
 
 

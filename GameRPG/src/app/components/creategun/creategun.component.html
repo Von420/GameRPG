@@ -1,0 +1,41 @@
+<body>
+    <div class="img-container">
+      <img src="../../../assets/img/fundo.jpg" alt="">
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a [routerLink]="['/Home']" routerLinkActive="active">Home</a></li>
+        <li><a [routerLink]="['/Createchar']" routerLinkActive="active">CreateChar</a></li>
+        <li><a [routerLink]="['/Arena']" routerLinkActive="active">To Fight</a></li>
+        <li><a [routerLink]="['/Login']" routerLinkActive="active">Exit</a></li>
+      </ul>
+    </nav>
+    
+    <div class="createChar-containe">
+      <div class="form">
+        <h2>Create new Weapon </h2>
+
+        <input #user type="text" class="text" placeholder="username" >
+        <br>
+        <input #pass type="password" class="text" placeholder="password">
+        <br>
+        <input #name type="text" class="text" placeholder="weapon name">
+        <br>
+        <input #tipoArma type="text" class="text" placeholder="weapon type">
+        <br>
+        <input #vida type="text" class="text" placeholder="life">
+        <br>
+        <input #atk type="text" class="text" placeholder="atk">
+        <br>
+        <input #durabilidade type="text" class="text" placeholder="durabilidade">
+        <br>
+        <input #idPerso type="text" class="text" placeholder="idPersonagem">
+        <br>
+
+        <button class="create" (click)="registar(user.value,name.value,pass.value,tipoArma.value,vida.value,atk.value,durabilidade.value,idPerso.value)">Create</button>
+      </div>
+    </div>
+    <div class="anime">
+      <img src="../../../assets/img/weapon.gif" alt="" class="weapon">
+    </div>
+  </body>

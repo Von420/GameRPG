@@ -8,20 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ArenaComponent } from './components/arena/arena.component';
-import { CityComponent } from './components/city/city.component';
-import { ShopComponent } from './components/shop/shop.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { CreatecharComponent } from './components/createchar/createchar.component';
+import { CreategunComponent } from './components/creategun/creategun.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ArenaComponent,
-    CityComponent,
-    ShopComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CreatecharComponent,
+    CreategunComponent
   ],
   imports: [
     BrowserModule,

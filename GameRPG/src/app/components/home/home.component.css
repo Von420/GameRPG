@@ -19,38 +19,72 @@ body {
 
 nav {
   position: fixed;
-left: 25%;
-right: 0;
-top: 3%;
-font-family: 'Montserrat', sans-serif;
+  left: 25%;
+  right: 0;
+  top: 5%;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-height: 70px;
+  height: 70px;
   width: 50%;
-background-color: #191919;;
+  background-color: #191919;;
   opacity: 70%;
   float: center;
 }
 
 nav .menu {
-float: center;
-padding: 0;
-margin: 0;
-width: 80%;
-height: 100%;
-display: flex;
-justify-content: space-around;
-align-items: center;
+  float: center;
+  padding: 0 95px;
+  margin: 0;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 nav .menu li {
-list-style: none;
+  list-style: none;
 }
 
 nav ul li a{
   color: white;
+  text-decoration: none;
 }
 
 
 nav ul li a.active,
 nav ul li a:hover{
 font-weight: bold;
+}
+
+.anime{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  height: 30px;
+  width: 20%;
+}
+
+.anime .welcome{
+  position: inherit;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+}
+
+
+.createChar-containe{
+  position: fixed;
+  left: 27.5%;
+  right: 0;
+  top: 25%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  height: 40%;
+  width: 45%;
+  background-color: #fff;
+  opacity: 70%;
+  float: center;
 }

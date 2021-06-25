@@ -1,79 +1,79 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PlayerService } from 'src/app/services/player.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AutenticacaoService {
+export class ServiceRPGService {
 
-  constructor(private http: HttpClient, private playerService: PlayerService) { }
+  constructor(private http: HttpClient) { }
 
 
-   // vars
+   // variaveis
   linkLogin: string = "http://moreiramoises.pt/server/apis/login.php";
   linkSignUp: string = 'http://moreiramoises.pt/server/apis/signup.php';
   linkCreateChar: string = 'http://moreiramoises.pt/server/apis/createChart.php';
+  linkGetArma: string ="http://moreiramoises.pt/server/apis/createArma.php";
   linkCharId: string = 'http://moreiramoises.pt/server/apis/get/getChar.php?PlayerID=';
-  linkRndChar: string = 'http://moreiramoises.pt/server/apis/get/getRandomChar.php?';
-  linkUpdateChar: string = 'http://moreiramoises.pt/server/apis/updateChart.php';
+  linkEnemy: string ="http://moreiramoises.pt/server/apis/get/getRandomChar.php?";
 
-  // log in to an account
-  logIn(user: string, pass: string) {
-    let dataToSend: FormData = new FormData();
-
-    dataToSend.append("username", user);
+  //login
+  login(nome:string, pass:string)
+  {
+    let dataToSend : FormData = new FormData();
+    dataToSend.append("username", nome);
     dataToSend.append("password", pass);
-
-    return this.http.post(this.linkLogin, dataToSend);
+    return this.http.post(this.linkLogin,dataToSend);
   }
 
-  
-  SignUp(user: string, pass: string) {
-    let dataToSend: FormData = new FormData();
+//sign up
+ signUp(nome:string, pass:string)
+ {
+  let dataToSend : FormData = new FormData();
+  dataToSend.append("username", nome);
+  dataToSend.append("password", pass);
+  return this.http.post(this.linkSignUp,dataToSend);
+ }
 
-    dataToSend.append('username', user);
-    dataToSend.append('password', pass);
+//criar arma
+ createWeapon(name:string,attack:string,durabilidade:string,life:string,user:string,pass:string,idPerso:string,tipoArma:string)
+ {
+  let dataToSend : FormData = new FormData();
+  dataToSend.append("name",name);
+  dataToSend.append("atk", attack);
+  dataToSend.append("durabilidade", durabilidade);
+  dataToSend.append("vida", life);
+  dataToSend.append("username", user);
+  dataToSend.append("password", pass);
+  dataToSend.append("idPersonagem", idPerso);
+  dataToSend.append("tipoDeArma", tipoArma);
 
-    return this.http.post(this.linkSignUp, dataToSend);
-  }
+  return this.http.post(this.linkGetArma,dataToSend);
+ }
 
-  
-  createChar(name: string, atk: string, int: string, vida: string, user: string, pass: string) {
-    let dataToSend: FormData = new FormData();
+ //criar personagem
+ createChar(user:string,name:string, pass:string, isMonster:string,int:string,life:string ,attack:string )
+ {
+  let dataToSend : FormData = new FormData();
+  dataToSend.append("name", name);
+  dataToSend.append("atk", attack);
+  dataToSend.append("isMonster", isMonster);
+  dataToSend.append("int", int);
+  dataToSend.append("vida", life);
+  dataToSend.append("username", user);
+  dataToSend.append("password", pass);
+  return this.http.post(this.linkCreateChar,dataToSend);
+ }
 
-    dataToSend.append('name', name);
-    dataToSend.append('atk', atk);
-    dataToSend.append('isMonster', 'false');
-    dataToSend.append('int', int);
-    dataToSend.append('vida', vida);
-    dataToSend.append('username', user);
-    dataToSend.append('password', pass);
+ //obter personagem
+ getcharacter(id :String)
+ {
+    return this.http.get(this.linkCharId +id);
+ }
 
-    return this.http.post(this.linkCreateChar, dataToSend);
-  }
-
-  
-  getCharID(id: string) {
-    return this.http.get(this.linkCharId + id);
-  }
-
-  
-  getRndChar() {
-    return this.http.get(this.linkRndChar);
-  }
-
-  updateStats(atk: string, int: string, vida: string) {
-    let dataToSend: FormData = new FormData();
-
-    dataToSend.append('name', this.playerService.player.name);
-    dataToSend.append('atk', atk);
-    dataToSend.append('isMonster', 'false');
-    dataToSend.append('int', int);
-    dataToSend.append('vida', vida);
-    dataToSend.append('username', this.playerService.username);
-    dataToSend.append('password', this.playerService.password);
-
-    return this.http.post(this.linkUpdateChar, dataToSend);
-  }
+ //obter inimigo
+ getenemy()
+ {
+    return this.http.get(this.linkEnemy);
+ }
 }

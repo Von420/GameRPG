@@ -1,0 +1,40 @@
+<body>
+    <div class="img-container">
+      <img src="../../../assets/img/fundo.jpg" alt="">
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a [routerLink]="['/Home']" routerLinkActive="active">Home</a></li>
+        <li><a [routerLink]="['/Creategun']" routerLinkActive="active">CreateWeapon</a></li>
+        <li><a [routerLink]="['/Arena']" routerLinkActive="active">To Fight</a></li>
+        <li><a [routerLink]="['/Login']" routerLinkActive="active">Exit</a></li>
+      </ul>
+    </nav>
+    <div class="createChar-containe">
+      <div class=form>
+        <h2>Create new Character </h2>
+
+        <input #user type="text" class="text" placeholder="username" required>
+        <br>
+        <input #pass type="password" class="text" placeholder="password" required>
+        <br>
+        <input #name type="text" class="text" placeholder="character name" required>
+        <br>
+        <input #isMonster type="text" class="text" placeholder="is it a monster? (y/n)" required>
+        <br>
+        <input #int type="text" class="text" placeholder="intelligence" required>
+        <br>
+        <input #life type="text" class="text" placeholder="life" required>
+        <br>
+        <input #atack type="text" class="text" placeholder="atack" required>
+        <br>
+        <button class="create" (click)="registar(user.value,name.value,pass.value,isMonster.value,int.value,life.value,atack.value)" >Create</button>
+      </div>
+    </div>
+    <div class="anime">
+      <img src="../../../assets/img/anime.gif" alt="" class="anime1">
+    </div>
+  
+  
+  
+  </body>
