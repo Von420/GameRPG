@@ -1,8 +1,9 @@
 body {
     width: 100%;
     height: 100%;
+    background-color: #333333;
   }
-  
+
 .img-container {
   position: absolute;
   top: 0;
@@ -10,27 +11,27 @@ body {
   width: 100%;
   height: 100vh;
 }
-  
+
 .img-container img {
   width: 100%;
   height: 100vh;
   object-fit: fill;
 }
-  
+
 nav {
   position: fixed;
-  left: 25%;
   right: 0;
   top: 5%;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   height: 70px;
-  width: 50%;
-  background-color: #191919;;
-  opacity: 70%;
+  width: 35%;
+  float: left;
+  background-color:black;
+  border-radius: 20px;
   float: center;
 }
-  
+
 nav .menu {
   float: center;
   padding: 0 95px;
@@ -41,38 +42,24 @@ nav .menu {
   justify-content: space-around;
   align-items: center;
 }
-  
+
 nav .menu li {
   list-style: none;
 }
-  
+
 nav ul li a{
   color: white;
   text-decoration: none;
 }
-  
-  
+
+
 nav ul li a.active,
 nav ul li a:hover{
-  font-weight: bold;
+font-weight: bold;
 }
-  
-.anime{
-  position: fixed;
-  left: 62.5%;
-  right: 0;
-  top: 20%;
-  font-size: 20px;
-  height: 30px;
-  width: 50%;
-}
-  
-.anime .weapon{
-  position: inherit;
-  left: 50%;
-  top: 28%;
-  width: 29%;
-}
+
+
+
 
 .createChar-containe{
   position: fixed;
@@ -90,34 +77,40 @@ nav ul li a:hover{
 
 .form{
   position: absolute;
-  left: 12%;
+    margin-left: 30%;
+    margin-right:30%;
+    margin-top: 10%;
+    width: 200px
 }
 
 .form input{
   margin-bottom: 10px;
-  width: 200px;
-  height: 20px;
-  border: 3px solid #000;
+    width: 400px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
 }
-  
+
 .form h2{
   margin-top: 40px;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .text{
   margin-bottom: 10px;
-  margin-left: 20%;
+    margin-left: 20%;
 }
 
 
 button{
   width: 100px;
-  height: 40px;
-  margin-top: 13%;
-  margin-left: 35%;
-  background-color: #191919;;
-  opacity: 80%;
-  color: #fff;
-  font-size: 18px;
+    height: 40px;
+    margin-top: 20%;
+    margin-left: 25%;
+    background-color:black;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 18px;
 }
