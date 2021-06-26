@@ -46,7 +46,7 @@ export class ArenaComponent implements OnInit {
     if(this.vida>0 &&  this.vidaE>0){
       this.vida=this.vida-this.ataqueE;
       this.vidaE=this.vidaE-this.ataque;
-      
+
     }
     else{
       if(this.vida<this.vidaE)
@@ -65,7 +65,6 @@ export class ArenaComponent implements OnInit {
         this.playerService.player.name = x['data'].Personagens[0].Nome;
         this.playerService.player.id = x['data'].Personagens[0].ID;
         this.playerService.player.atk = x['data'].Personagens[0].Atk;
-        this.playerService.player.isMonset = x['data'].Personagens[0].IsMonset;
         this.playerService.player.int = x['data'].Personagens[0].Int;
         this.playerService.player.life = x['data'].Personagens[0].Vida;
         this.playerService.player.idPlayer = x['data'].Personagens[0].ID_Player;
@@ -81,7 +80,6 @@ export class ArenaComponent implements OnInit {
         this.playerService.enemy.name = x['data'].Nome;
         this.playerService.enemy.id = x['data'].ID;
         this.playerService.enemy.atk = x['data'].Atk;
-        this.playerService.enemy.isMonset = x['data'].IsMonset;
         this.playerService.enemy.int = x['data'].Int;
         this.playerService.enemy.life = x['data'].Vida;
         this.playerService.enemy.idPlayer = x['data'].ID_Player;
@@ -89,7 +87,7 @@ export class ArenaComponent implements OnInit {
     });
   }
 
-  changetxt(){ //esta função muda os valores predefinidos referentes ao personagem, para o inserido na base de dados
+  changetxt(){ // nesta função altera os valores das stats e insere na
     let atk1:any = document.getElementById('atk');
     atk1.innerText =  this.playerService.player.atk;
 
@@ -104,7 +102,7 @@ export class ArenaComponent implements OnInit {
 
   }
 
-  changetxt2(){ //esta função muda os valores predefinidos referentes ao personagem inimigo, para o inserido na base de dados
+  changetxt2(){ //esta funçao vai buscar as stats do inimiogo para ser inseridas na base de dados
     let atk2:any = document.getElementById('atk2');
     atk2.innerText =  this.playerService.enemy.atk;
 
@@ -118,8 +116,8 @@ export class ArenaComponent implements OnInit {
     eName2.innerText =  this.playerService.enemy.name;
 
 
-    this.setInitialValue(); 
+    this.setInitialValue();
   }
 }
 
-//No que toca as status de cada personagem, não estão funcionais devido ao aparecimento de alguns erros
+// duarante a criação da personagem ira encontra alguns erros que nao foram polidos durante a fazer de criaçao do projeto
